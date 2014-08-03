@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   resources :users
 
   resources :stocks
+    get "signin" => "users#signin"
+
+  get "search" => "users#search"
 
   root 'welcome#index'
   get "welcome/about" => "welcome#about"
