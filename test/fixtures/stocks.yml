@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ticker: MyString
+  price: 1.5
+  company: MyString
+  owned: false
+  watching: false
+  user_id: 
+
+two:
+  ticker: MyString
+  price: 1.5
+  company: MyString
+  owned: false
+  watching: false
+  user_id: 

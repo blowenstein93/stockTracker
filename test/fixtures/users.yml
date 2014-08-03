@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  eamil: MyString
+  stocks: 
+  phone: 1
+
+two:
+  eamil: MyString
+  stocks: 
+  phone: 1

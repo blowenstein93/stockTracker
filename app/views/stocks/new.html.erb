@@ -1,0 +1,15 @@
+<%= form_for @stock do |s|%>
+<p>Company    <%= s.text_field :company %></p>
+
+<p>Do you <strong>own</strong><%= s.check_box :owned %> this stock? Or just want to <strong>keep an eye on it</strong><%= s.check_box :watching %></p>
+<%= s.hidden_field :user_id, :value => params[:id] %>
+
+<%= s.fields_for :notifications do |n| %>
+<h4 style="font-size:22px">How would you like to be notified?</h4>
+<p>When the stock goes <%= n.check_box :above%> above
+<%= n.number_field :high %> and/or when the stock goes
+<%= n.check_box :below%> below <%= n.number_field :low%>.
+<% end %>
+    <%= s.submit "Submit"%>
+
+<% end %>

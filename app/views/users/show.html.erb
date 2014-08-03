@@ -1,0 +1,23 @@
+<h2>Welcome <%= @user.email %></h2>
+<%= link_to "Follow a new stock", new_stock_path(:id => @user.id), class: "new_stock" %>
+
+<hr>
+<% if !(@stocks.length <= 0) %>
+<h4>Stocks You're Interested In</h4>
+
+    <table>
+    <tr>
+    <th>Company</th><th>Ticker</th><th>Price</th><th>Status</th><th>Destroy</th>
+    </tr>
+    <% @stocks.each do |s| %>
+        <tr>
+        <td><%= s.company %></td>
+        <td><%= s.ticker %></td>
+        <td><%= s.price %></td>
+        <td><%= s.owned ? "owned" : (s.watching ? "watching" : "none") %></td>
+        <td><%= link_to "Delete", s, method: :delete %></td>
+        </tr>
+    <% end %>
+    </table>
+<% end %>
+
