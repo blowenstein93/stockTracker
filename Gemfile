@@ -41,4 +41,6 @@ gem 'spring',        group: :development
 
 gem 'market_beat'
 
+gem 'twilio-ruby'
+
 ruby '2.0.0'

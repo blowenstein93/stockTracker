@@ -1,4 +1,4 @@
-class CreateStocks < ActiveRecord::Migration
+class Stocks < ActiveRecord::Migration
   def change
     create_table :stocks do |t|
       t.string :ticker
@@ -9,6 +9,6 @@ class CreateStocks < ActiveRecord::Migration
       t.belongs_to :user, index: true
 
       t.timestamps
-    end
+  end
   end
 end

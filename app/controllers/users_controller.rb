@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @stocks = Stock.where(user_id: params[:id])
+    @stock = Stock.where(user_id: params[:id])
   end
 
   def new

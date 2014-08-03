@@ -33,6 +33,14 @@ class StocksController < ApplicationController
     redirect_to :back
   end
 
+  def text
+    if Stock.text(params[:id])
+      redirect_to :back
+    else
+      redirect_to root_path
+    end
+  end
+
 private
 
     def stock_params

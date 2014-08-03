@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
   get "welcome/about" => "welcome#about"
+  get "stocks/stock/text/id=:id" => "stocks#text"
   # The priority is based upon order of creation: first created -> highest riority.
   # See how all your routes lay out with "rake routes".
 

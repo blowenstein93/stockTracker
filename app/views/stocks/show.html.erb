@@ -1,4 +1,5 @@
 <h2>Listing for <%= @stock.company %> </h2>
-
+<p><%= link_to "Back to my Account", user_path(@stock.user_id) %></p>
 <h4>Track the <%= @stock.ticker%> ticker</h4>
 <p>Opening price: <%= @stock.price%></p>
+<p>Send a <%= link_to 'test notification', "stock/text/id=#{@stock.id}"%></p>
