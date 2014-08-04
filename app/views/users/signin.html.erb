@@ -2,15 +2,16 @@
 <h2 class="new_accnt">Sign-In Below to See Your Stocks</h2>
 
 
-<div class="forms">
+<div class="form">
 
     <%= form_tag("/search", method: "get") do %>
 
-    <div class="input">
+    <div class="inputs">
         <%= label_tag(:email) %> <br>
         <%= text_field_tag(:email) %>
+
+        <%= submit_tag("Submit", class: "submit") %>
     </div>
 
-            <%= submit_tag("Submit", class: "submit") %>
     <% end %>
 </div>
